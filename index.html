@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Radoanul Arifen — SQA & AI Automation Engineer | Research Contributor | CSE Student">
+  <title>Radoanul Arifen — SQA & AI Automation Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Scroll progress bar ── -->
+  <div id="sp" aria-hidden="true"></div>
+
+  <!-- ── Animated stars canvas ── -->
+  <canvas id="sc" aria-hidden="true"></canvas>
+
+  <!-- ── Page loader ── -->
+  <div id="loader" role="status" aria-label="Loading">
+    <div class="lr-ra">RA</div>
+    <div class="lr-bar"><div class="lr-fill"></div></div>
+    <p class="lt">INITIALIZING...</p>
+  </div>
+
+  <!-- ================================================================
+       NAVIGATION
+  ================================================================= -->
+  <nav id="nb" role="navigation" aria-label="Main navigation">
+    <div class="nav-logo">RA<span>.</span></div>
+
+    <ul class="nl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-r">
+      <button class="tbtn" id="tbtn" aria-label="Toggle theme">🌙</button>
+      <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Mobile menu ── -->
+  <nav class="mm" id="mm" aria-label="Mobile navigation">
+    <a href="#about"          onclick="closeMenu()">About</a>
+    <a href="#skills"         onclick="closeMenu()">Skills</a>
+    <a href="#experience"     onclick="closeMenu()">Experience</a>
+    <a href="#projects"       onclick="closeMenu()">Projects</a>
+    <a href="#research"       onclick="closeMenu()">Research</a>
+    <a href="#education"      onclick="closeMenu()">Education</a>
+    <a href="#certifications" onclick="closeMenu()">Certifications</a>
+    <a href="#contact"        onclick="closeMenu()">Contact</a>
+  </nav>
+
+  <!-- ================================================================
+       HERO
+  ================================================================= -->
+  <section id="hero">
+    <div class="hi">
+
+      <!-- Left: text content -->
+      <div>
+        <div class="hbadge rv">
+          <span class="hbdot" aria-hidden="true"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="htitle rv d1">
+          Hi, I'm
+          <span class="nm">Radoanul Arifen</span>
+        </h1>
+
+        <p class="htype rv d2">
+          <span id="tel"></span>
+          <span class="tc" aria-hidden="true"></span>
+        </p>
+
+        <p class="hdesc rv d3">
+          Building intelligent automation systems and delivering high-quality software solutions —
+          from machine-learning research to production QA pipelines.
+        </p>
+
+        <div class="hcta rv d4">
+          <a href="assets/documents/RADOANUL ARIFEN.docx.pdf" class="btn bf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="btn bg">
+            View Projects
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn bg2">Contact Me</a>
+        </div>
+
+        <div class="hsoc rv">
+          <a href="https://github.com/RadoanulArifen" class="sb" title="GitHub" aria-label="GitHub profile" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/radoanularifen" class="sb" title="LinkedIn" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="mailto:radoanularifen@gmail.com" class="sb" title="Email" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: circular avatar -->
+      <div class="hav rv d2">
+        <div class="av-ring" aria-hidden="true"></div>
+        <div class="av-ring2" aria-hidden="true"></div>
+
+        <div class="av-frame" id="avFrame">
+          <img src="assets/images/mypic.png" alt="Radoanul Arifen" id="profImg">
+          <div class="av-init" id="avInit" style="display:none">RA</div>
+        </div>
+
+        <span class="otag qa">QA</span>
+        <span class="otag ai">AI</span>
+        <span class="otag ml">ML</span>
+        <span class="otag cd">{ }</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       ABOUT
+  ================================================================= -->
+  <section id="about">
+    <div class="si">
+      <div class="slabel rv">01 — About</div>
+      <h2 class="shead rv d1"><span class="g">About</span> Me</h2>
+
+      <div class="ag">
+        <div class="at rv d2">
+          <p>
+            I'm <strong>Radoanul Arifen</strong>, a Computer Science &amp; Engineering student with a deep
+            passion for Software Quality Assurance and AI-driven automation. I believe great software isn't
+            just built — it's validated, refined, and continuously improved.
+          </p>
+          <p>
+            My work bridges traditional QA practices with cutting-edge machine learning research. From
+            designing bulletproof test frameworks with <strong>Selenium</strong> and <strong>Playwright</strong>
+            to building predictive ML models for disease detection.
+          </p>
+          <p>
+            As a <strong>Research Contributor</strong> with 7 international conference publications spanning
+            AI, agriculture, healthcare, and public safety, I'm committed to building technology that creates
+            real-world impact.
+          </p>
+        </div>
+
+        <div class="ac rv d3">
+          <div class="acard">
+            <div class="acard-ic">🔍</div>
+            <h4>Manual Testing</h4>
+            <p>Meticulous test case design and comprehensive bug lifecycle management</p>
+          </div>
+          <div class="acard">
+            <div class="acard-ic">🤖</div>
+            <h4>AI Automation</h4>
+            <p>Intelligent test frameworks powered by ML and behavioral analysis</p>
+          </div>
+          <div class="acard">
+            <div class="acard-ic">🧠</div>
+            <h4>ML Research</h4>
+            <p>CNN models, disease detection, and predictive analytics research</p>
+          </div>
+          <div class="acard">
+            <div class="acard-ic">📊</div>
+            <h4>QA Strategy</h4>
+            <p>End-to-end quality engineering with CI/CD integration and metrics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SKILLS
+  ================================================================= -->
+  <section id="skills">
+    <div class="si c">
+      <div class="slabel rv">02 — Skills</div>
+      <h2 class="shead rv d1">Technical <span class="g">Arsenal</span></h2>
+      <p class="ssub rv d2">Tools and technologies I work with to build, test, and automate high-quality software systems.</p>
+
+      <div class="sfilt rv d3" id="sfilt" role="group" aria-label="Filter skills by category">
+        <button class="fb on" data-c="all">All</button>
+        <button class="fb" data-c="testing">Testing</button>
+        <button class="fb" data-c="automation">Automation</button>
+        <button class="fb" data-c="ai">AI / ML</button>
+        <button class="fb" data-c="tools">Tools</button>
+      </div>
+
+      <div class="sg" id="sg" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       EXPERIENCE
+  ================================================================= -->
+  <section id="experience">
+    <div class="si c">
+      <div class="slabel rv">03 — Journey</div>
+      <h2 class="shead rv d1"><span class="g">Experience</span></h2>
+      <p class="ssub rv d2">Where I've contributed to building quality software &amp; research.</p>
+      <div class="tline" id="tline"></div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       PROJECTS
+  ================================================================= -->
+  <section id="projects">
+    <div class="si">
+      <div class="slabel rv">04 — Projects</div>
+      <h2 class="shead rv d1">Featured <span class="g">Projects</span></h2>
+      <p class="ssub rv d2">A selection of projects spanning SQA, AI automation, and web development.</p>
+
+      <!-- ── Project Category Tabs ── -->
+      <div class="res-tabs rv d2" role="tablist" aria-label="Project categories" style="margin-bottom:2rem;">
+        <button class="proj-tab res-tab active" data-tab="sqa" role="tab" aria-selected="true" aria-controls="proj-panel-sqa">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          SQA
+        </button>
+        <button class="proj-tab res-tab" data-tab="ai" role="tab" aria-selected="false" aria-controls="proj-panel-ai">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          AI Automation
+        </button>
+        <button class="proj-tab res-tab" data-tab="web" role="tab" aria-selected="false" aria-controls="proj-panel-web">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Web Development
+        </button>
+      </div>
+
+      <!-- ── SQA Panel ── -->
+      <div class="proj-panel" id="proj-panel-sqa" role="tabpanel" aria-labelledby="tab-sqa">
+        <div class="carousel-wrap">
+          <div class="carousel-header rv">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="carousel-dots" id="proj-dots-sqa" role="tablist" aria-label="SQA project pages"></div>
+              <span class="carousel-counter" id="proj-counter-sqa" aria-live="polite"></span>
+            </div>
+            <div class="carousel-btns">
+              <button class="carousel-btn carousel-btn-back" id="pmb-sqa-back" disabled aria-label="Previous SQA projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+              </button>
+              <button class="carousel-btn" id="pmb-sqa" aria-label="Next SQA projects">
+                Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="pg" id="pg-sqa"></div>
+        </div>
+      </div>
+
+      <!-- ── AI Automation Panel ── -->
+      <div class="proj-panel hidden" id="proj-panel-ai" role="tabpanel" aria-labelledby="tab-ai">
+        <div class="carousel-wrap">
+          <div class="carousel-header rv">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="carousel-dots" id="proj-dots-ai" role="tablist" aria-label="AI project pages"></div>
+              <span class="carousel-counter" id="proj-counter-ai" aria-live="polite"></span>
+            </div>
+            <div class="carousel-btns">
+              <button class="carousel-btn carousel-btn-back" id="pmb-ai-back" disabled aria-label="Previous AI projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+              </button>
+              <button class="carousel-btn" id="pmb-ai" aria-label="Next AI projects">
+                Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="pg" id="pg-ai"></div>
+        </div>
+      </div>
+
+      <!-- ── Web Development Panel ── -->
+      <div class="proj-panel hidden" id="proj-panel-web" role="tabpanel" aria-labelledby="tab-web">
+        <div class="carousel-wrap">
+          <div class="carousel-header rv">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="carousel-dots" id="proj-dots-web" role="tablist" aria-label="Web dev project pages"></div>
+              <span class="carousel-counter" id="proj-counter-web" aria-live="polite"></span>
+            </div>
+            <div class="carousel-btns">
+              <button class="carousel-btn carousel-btn-back" id="pmb-web-back" disabled aria-label="Previous web projects">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+              </button>
+              <button class="carousel-btn" id="pmb-web" aria-label="Next web projects">
+                Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="pg" id="pg-web"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       RESEARCH — PAPERS + DATASETS
+  ================================================================= -->
+  <section id="research">
+    <div class="si c">
+      <div class="slabel rv">05 — Research</div>
+      <h2 class="shead rv d1"><span class="g">Research</span> Work</h2>
+      <p class="ssub rv d2">Peer-reviewed contributions and curated datasets across machine learning and applied research.</p>
+
+      <!-- ── Tab switcher ── -->
+      <div class="res-tabs rv d2" role="tablist" aria-label="Research sections">
+        <button class="res-tab active" id="tab-papers"   role="tab" aria-selected="true"  aria-controls="panel-papers"   data-tab="papers">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          Papers
+          <span class="res-tab-count" id="tc-papers"></span>
+        </button>
+        <button class="res-tab" id="tab-datasets" role="tab" aria-selected="false" aria-controls="panel-datasets" data-tab="datasets">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          Datasets
+          <span class="res-tab-count" id="tc-datasets"></span>
+        </button>
+      </div>
+
+      <!-- ── Papers panel ── -->
+      <div class="res-panel" id="panel-papers" role="tabpanel" aria-labelledby="tab-papers">
+        <div class="carousel-wrap">
+          <div class="carousel-header rv">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="carousel-dots" id="pub-dots"></div>
+              <span class="carousel-counter" id="pub-counter" aria-live="polite"></span>
+            </div>
+            <div class="carousel-btns">
+              <button class="carousel-btn carousel-btn-back" id="rmbtn-back" disabled aria-label="Previous papers">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+              </button>
+              <button class="carousel-btn" id="rmbtn" aria-label="Next papers">
+                Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="pubg" id="pubg"></div>
+        </div>
+      </div>
+
+      <!-- ── Datasets panel ── -->
+      <div class="res-panel hidden" id="panel-datasets" role="tabpanel" aria-labelledby="tab-datasets">
+        <div class="carousel-wrap">
+          <div class="carousel-header rv">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="carousel-dots" id="ds-dots"></div>
+              <span class="carousel-counter" id="ds-counter" aria-live="polite"></span>
+            </div>
+            <div class="carousel-btns">
+              <button class="carousel-btn carousel-btn-back" id="dsmb-back" disabled aria-label="Previous datasets">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+              </button>
+              <button class="carousel-btn" id="dsmb" aria-label="Next datasets">
+                Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="dsg" id="dsg"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       EDUCATION
+  ================================================================= -->
+  <section id="education">
+    <div class="si c">
+      <div class="slabel rv">06 — Background</div>
+      <h2 class="shead rv d1"><span class="g">Education</span></h2>
+      <p class="ssub rv d2">Academic foundations behind the engineering work.</p>
+
+      <div class="edug rv d2">
+        <article class="educ">
+          <div class="eduic">🎓</div>
+          <div class="edus">Daffodil International University</div>
+          <div class="edud">B.Sc. in Computer Science &amp; Engineering</div>
+          <div class="edum">2022 Jan — 2025 Dec &nbsp;@&nbsp; Dhaka, Bangladesh</div>
+          <!-- <div class="edude">Focused on software engineering, machine learning and quality assurance. Active in research with 6+ published papers.</div> -->
+        </article>
+        <article class="educ">
+          <div class="eduic">📚</div>
+          <div class="edus">Cantonment College Cumilla</div>
+          <div class="edud">Higher Secondary Certificate in Science</div>
+          <div class="edum">2019 — 2021 &nbsp;@&nbsp; Cumilla, Bangladesh</div>
+          <!-- <div class="edude">Strong foundation in mathematics, physics and computer science fundamentals.</div> -->
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       CERTIFICATIONS
+  ================================================================= -->
+  <section id="certifications">
+    <div class="si">
+      <div class="slabel rv">07 — Credentials</div>
+      <h2 class="shead rv d1"><span class="g">Certifications</span></h2>
+      <p class="ssub rv d2">Professional certifications showcasing expertise in software testing, AI, machine learning, and modern development technologies.</p>
+
+      <div class="carousel-wrap">
+        <div class="carousel-header rv">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div class="carousel-dots" id="cert-dots"></div>
+            <span class="carousel-counter" id="cert-counter" aria-live="polite"></span>
+          </div>
+          <div class="carousel-btns">
+            <button class="carousel-btn carousel-btn-back" id="cmb-back" disabled aria-label="Previous certifications">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+            </button>
+            <button class="carousel-btn" id="cmb" aria-label="Next certifications">
+              Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="cg" id="cg"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       ARTICLES (COMMENTED OUT)
+  ================================================================= -->
+  <!-- <section id="articles">
+    <div class="si c">
+      <div class="slabel rv">+ — Writing</div>
+      <h2 class="shead rv d1"><span class="g">Engineering & Research </span> Insights</h2>
+      <p class="ssub rv d2">Technical insights on AI, automation, software quality, and applied research.</p>
+      <div class="carousel-wrap">
+        <div class="carousel-header rv">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div class="carousel-dots" id="art-dots"></div>
+            <span class="carousel-counter" id="art-counter" aria-live="polite"></span>
+          </div>
+          <div class="carousel-btns">
+            <button class="carousel-btn carousel-btn-back" id="artmb-back" disabled aria-label="Previous articles">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back
+            </button>
+            <button class="carousel-btn" id="artmb" aria-label="Next articles">
+              Next<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="artg" id="artg"></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ================================================================
+       CONTACT
+  ================================================================= -->
+  <section id="contact">
+    <div class="si c">
+      <div class="slabel rv">08 — Contact</div>
+      <h2 class="shead rv d1">Let's <span class="g">Connect</span></h2>
+      <p class="ssub rv d2">Have a project, role, or research collaboration in mind? Drop a message.</p>
+
+      <div class="cog rv d2">
+        <!-- Contact info -->
+        <address class="coit" style="font-style:normal;">
+          <div class="coitem">
+            <div class="coic">📧</div>
+            <div>
+              <div class="coll">Email</div>
+              <div class="colv">radoanul@example.com</div>
+            </div>
+          </div>
+          <div class="coitem">
+            <div class="coic">🐙</div>
+            <div>
+              <div class="coll">GitHub</div>
+              <div class="colv">@radoanul</div>
+            </div>
+          </div>
+          <div class="coitem">
+            <div class="coic">💼</div>
+            <div>
+              <div class="coll">LinkedIn</div>
+              <div class="colv">/in/radoanul</div>
+            </div>
+          </div>
+          <div class="coitem">
+            <div class="coic">📍</div>
+            <div>
+              <div class="coll">Location</div>
+              <div class="colv">Dhaka, Bangladesh</div>
+            </div>
+          </div>
+        </address>
+
+        <!-- Contact form -->
+        <div class="cof" role="form" aria-label="Contact form">
+          <div class="frow">
+            <div class="fg">
+              <label class="fl" for="f-name">Name</label>
+              <input type="text" id="f-name" class="fi" placeholder="Your name" autocomplete="name">
+            </div>
+            <div class="fg">
+              <label class="fl" for="f-email">Email</label>
+              <input type="email" id="f-email" class="fi" placeholder="your@email.com" autocomplete="email">
+            </div>
+          </div>
+          <div class="fg">
+            <label class="fl" for="f-msg">Message</label>
+            <textarea id="f-msg" class="fta" placeholder="Tell me about your project, role, or idea…"></textarea>
+          </div>
+          <button class="sbtn" id="sbtn" type="button">
+            Send Message
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================= -->
+  <footer>
+    <div class="fi2">
+      <div>
+        <div class="flogo">Radoanul Arifen</div>
+        <p class="fcp">© 2026 — Crafted with care · SQA &amp; AI Automation Engineer</p>
+      </div>
+      <div class="fr">
+        <a href="https://github.com" class="sb" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true">
+            <path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" class="sb" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14" aria-hidden="true">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="mailto:radoanul@example.com" class="sb" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+        <button class="bt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
