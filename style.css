@@ -564,6 +564,8 @@ section {
   line-height: 2.1;
   max-width: 520px;
   margin-bottom: 36px;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .hcta {
@@ -749,6 +751,8 @@ section {
   color: var(--t2);
   line-height: 2.1;
   margin-bottom: 18px;
+  text-align: justify;
+  text-wrap: pretty;
 }
 
 .at p strong { color: var(--teal); }

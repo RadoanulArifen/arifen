@@ -376,15 +376,14 @@ const PUBS = [
     ti: 'Behavioral Data-Driven Prediction of Suicide Risk Using Machine Learning Approaches',
     url: 'https://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view',
   },
-  // {
-  //   cf: 'IEEE', yr: 2026,
-  //   tags: [https://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_linkhttps://drive.google.com/file/d/1Ax8s8HG82HqBA-_0G1X63N-MryQ6-anV/view?usp=drive_link
-  //     { t: 'DL',   c: 'rgba(251,191,36,.15)',  tc: '#fbbf24' },
-  //     { t: 'Agri', c: 'rgba(74,222,128,.15)',  tc: '#4ade80' },
-  //   ],
-  //   ti: 'Transfer Learning Approaches for Plant Disease Classification in Low-Resource Settings',
-  //   url: 'https://drive.google.com/file/d/1example7/view',
-  // },
+  {
+    cf: 'SPECTRA 2026 Symposium on Photonics, Emerging Computational Technologies, Research & AI-Data Science', yr: 2026,
+    tags: [
+      { t: 'Systems', c: 'rgba(96,165,250,.15)', tc: '#60a5fa'  },
+    ],
+    ti: 'EXPLORING COGNITIVE DEPENDENCE ON GENERATIVE AI AMONG BANGLADESHI UNIVERSITY STUDENTS: THE ROLES OF TRUST, CRITICAL THINKING, AND ACADEMIC DECISION-MAKING',
+    url: 'https://drive.google.com/file/d/1Nfkz8qfTl3VywehuWJ3TKU1n1jdNc1dt/view',
+  },
   // {
   //   cf: 'ICML', yr: 2026,
   //   tags: [
@@ -476,6 +475,19 @@ const DATASETS = [
     ],
     url: 'https://data.mendeley.com/datasets/bpns8vzwrj/2',
     doi: 'https://doi.org/10.17632/bpns8vzwrj.2',
+  },
+  {
+    ic: '🚨',
+    img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=640&q=80',
+    title: 'Dataset on Cognitive Dependence on Generative AI Tools among Bangladeshi University Students',
+    desc: 'Survey-based dataset capturing community awareness and response patterns for early warning systems in disaster-prone areas of Bangladesh.',
+    type: 'Public Safety', tBg: 'rgba(96,165,250,.2)', tClr: '#60a5fa',
+    rows: '5,100 records', size: '8 MB',
+    tags: [
+      { t: 'Mendeley Data', c: 'rgba(167,139,250,.15)', tc: '#a78bfa' },
+    ],
+    url: 'https://data.mendeley.com/datasets/7m94b7yr8w/2',
+    doi: 'https://doi.org/10.17632/7m94b7yr8w.2',
   },
 ];
 
